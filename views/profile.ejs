@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuoChat</title>
+    <link rel="shortcut icon" href="icons/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <h1>Welcome, <%= user.name %>!</h1>
+
+  <div class="profile-info">
+    <p>
+      <label>Gender:</label>
+      <span class="value"><%= user.gender %></span>
+    </p>
+    <p>
+      <label>Native Language:</label>
+      <span class="value"><%= user.native %></span>
+    </p>
+    <p>
+        <label>Learning:</label>
+        <span class="value"><%= user.learning %></span>
+      </p>
+    <p>
+      <label>Email:</label>
+      <span class="value"><%= user.email %></span>
+    </p>
+    <p>
+      <label>Phone Number:</label>
+      <span class="value"><%= user.number %></span>
+    </p>
+    <p>
+      <label>Rating:</label>
+      <span class="value"><%= user.rating %></span>
+    </p>
+    <p>
+      <label>Username:</label>
+      <span class="value"><%= user.username %></span>
+    </p>
+   
+  </div>
+</body>
+</html>

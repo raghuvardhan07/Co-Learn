@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuoChat</title>
+    <link rel="shortcut icon" href="icons/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="icons/logo.png" alt="">
+            <span>Welcome <b><%=username%></b></span>
+        </div>
+        <!-- <div class="dash-icons">
+            <img src="ProfilePic.jpg" alt="">
+            <span>Notes</span>
+        </div> -->
+        <!-- <div class="dash-icons">
+            <img src="ProfilePic.jpg" alt="">
+            <span>Messages</span>
+        </div> -->
+        <div class="dash-icons">
+            
+            <div class="dropdown">
+                <div class="dropbtn"><img src="ProfilePic.jpg" alt="">
+                    <span>Profile</span></div>
+                <div class="dropdown-content">
+                  <a href="/profile">Profile</a>
+                  <a href="/logout">Logout</a>
+                </div>
+              </div>
+        </div>
+    </nav>
+    <form action="/call" method="post">
+        <input type="text" value="<%=username%>"  name="uname" style="display: none;">
+        <button>Ping</button>
+    </form>
+    <div class="profile-container">
+        
+        <% for(let i = 0; i < users.length; i++){%>
+            <form action="/call" method="post" style="margin: 0;">
+                <div class="profile-card" id="<%=users[i].username%>" onclick="submitForm('<%=users[i].username%>')">
+                    <div class="infographic">
+                        <img src="ProfilePic.jpg" alt="">
+                        <span><b><%=users[i].username%></b></span>
+                    </div>
+                    <div class="languages">
+                        <span><b>Learns: </b><%=users[i].learning%></span>
+                        <span><b>Speaks: </b><%=users[i].native%></span>
+                    </div>
+                </div>
+                <input type="text" name="uname" value = "<%=username%>" style="display: none;">
+                <input type="text" name="theyname" value="<%=users[i].username%>" style="display: none;">
+                <input type="submit" style="display: none;" id='<%=users[i].username%>btn'></button>
+            </form>
+        <%}%>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

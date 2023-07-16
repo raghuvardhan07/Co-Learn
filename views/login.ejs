@@ -1,0 +1,22 @@
+<%- include("header.ejs") %>
+	<div class="wrapper">
+		<form class="form-signin" action="/login" method="post">       
+		  <h2 class="form-signin-heading">Please login</h2>
+		  <input type="text" name="username" placeholder="Email Address" autocomplete="off"/><br>
+		  <input type="password" name="password" placeholder="Password" autocomplete="off"/>  <br>    
+		  <button class="btn" type="submit">Login</button>   
+		</form>
+		<form class = "signUp" action="/signUp" method="get">
+			<p>Are you new?</p>
+			<button class = "btn">Sign Up</button>
+		</form>
+		<hr>
+		<div class="admin"><a href="/admin">Admin</a></div>
+		
+
+		
+		
+		
+	</div>
+
+		<%- include("footer.ejs") %>

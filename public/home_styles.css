@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    font-family: 'Space Grotesk';
+}
+#landing-page{
+    height: 100vh;
+    background: linear-gradient(to bottom, #d66f9d, #e01d4b);
+}
+#navbar{
+    margin: 0;
+    display: flex;
+    gap: 2rem; 
+    justify-content: end;
+    height: 5rem;
+    align-items: center;
+    list-style: none;
+    font-size: 1.1rem;
+    padding-right: 2rem;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    font-weight: 700;
+}
+
+#logo{
+    position: absolute;
+    left: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#logo>img{
+    width: 2rem;
+}
+
+#banner{
+    width: 39.5rem;
+}
+#infographic{
+    display: flex;
+    justify-content: end;
+}
+#info>strong{
+    font-size: 2.7rem;
+    color: black;
+}
+#info{
+    font-size: 1.7rem;
+    position: absolute;
+    left: 6rem;
+    top: 30vh;
+    color: white;
+}
+#about-us{
+    background: linear-gradient(#e19ec2, rgb(185, 52, 99));
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+#about-us > span{
+    font-size: 2rem;
+    font-weight: 700;
+}
+#features{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    width: 60rem;
+}
+.grid-items{
+    text-align: center;
+}
+.grid-items img{
+    width: 7rem;
+}
+#footer{
+    height: 12vh;
+    background-color: #ae517b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 3rem;
+}
+#footer img{
+    width: 2rem;
+}
+#footer img:hover{
+    width: 2.1rem;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CallStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <title>DuoChat</title>
+</head>
+<body>
+    <div id="videos">
+        <span id="username"><%=username%></span>
+        <video class = "video-player" id="user-1" data-uid="<%=uids.uid%>" autoplay playsinline></video>
+        <img src="ProfilePic.jpg" alt="" class="video-player" id="default-1">
+        <video class = "video-player" id="user-2" data-theyid="<%=uids.theyid%>" autoplay playsinline></video>
+    </div>
+    
+    <div id="controls">
+
+        <div class="control-container" id="camera-btn">
+            <img src="icons/camera.png" />
+        </div>
+
+        <div class="control-container" id="mic-btn">
+            <img src="icons/mic.png" />
+        </div>
+
+        <a href="/dashboard">
+            <div class="control-container" id="leave-btn">
+                <img src="icons/call-end.png" />
+            </div>
+        </a>
+
+    </div>
+    <div id="prompt">
+        
+    </div>
+    <script src='agora-rtm-sdk-1.5.1.js'></script>
+    <script src="Call.js"></script>
+    
+</body>
+
+</html>
